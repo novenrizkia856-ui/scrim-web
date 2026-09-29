@@ -1,0 +1,11 @@
+{
+  "name": "scrim-web",
+  "private": true,
+  "type": "module",
+  "description": "SCRIM website and Machine Economic Identity dapp for Robinhood Chain. Static HTML, CSS and JS; no build step.",
+  "scripts": {
+    "check": "node tools/check-copy.mjs && node --test test/policy.test.mjs test/config.test.mjs",
+    "check:browser": "node tools/check-browser.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

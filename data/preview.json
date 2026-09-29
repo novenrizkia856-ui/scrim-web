@@ -1,0 +1,385 @@
+{
+ "note": "Preview data. Fictional agents for the interface before the SCRIM contracts are deployed. Not chain state.",
+ "agents": [
+  {
+   "id": 842,
+   "agentKey": "0x3419d2e5a704b2962222f4f3282989a93deb0d82",
+   "controller": "0xb6e7e999de032a73e3c2e0da675f43e0f3282fcf",
+   "label": "Treasury payments agent",
+   "application": "Northwind Treasury",
+   "metadataURI": "",
+   "status": "active",
+   "createdAt": "2026-06-14T09:20:00Z",
+   "credentials": [
+    {
+     "id": 1,
+     "type": "controller",
+     "issuer": "SCRIM registry",
+     "issuerAddress": "0x10f2df447dc85ed3f2d411ea107bf69bf4d81f66",
+     "issuedAt": "2026-06-14T09:21:00Z",
+     "expiresAt": null,
+     "revoked": false,
+     "reference": "Controller key verified"
+    },
+    {
+     "id": 2,
+     "type": "application",
+     "issuer": "Northwind Treasury",
+     "issuerAddress": "0xb6e7e999de032a73e3c2e0da675f43e0f3282fcf",
+     "issuedAt": "2026-06-14T09:30:00Z",
+     "expiresAt": "2027-06-14T00:00:00Z",
+     "revoked": false,
+     "reference": "Treasury operations"
+    },
+    {
+     "id": 3,
+     "type": "capability",
+     "issuer": "Northwind Treasury",
+     "issuerAddress": "0xb6e7e999de032a73e3c2e0da675f43e0f3282fcf",
+     "issuedAt": "2026-06-15T11:00:00Z",
+     "expiresAt": "2027-03-31T00:00:00Z",
+     "revoked": false,
+     "reference": "Pay, swap and trade"
+    },
+    {
+     "id": 4,
+     "type": "delegation",
+     "issuer": "Northwind Treasury",
+     "issuerAddress": "0xb6e7e999de032a73e3c2e0da675f43e0f3282fcf",
+     "issuedAt": "2026-06-15T11:05:00Z",
+     "expiresAt": "2027-03-31T00:00:00Z",
+     "revoked": false,
+     "reference": "Delegation D1"
+    },
+    {
+     "id": 5,
+     "type": "capability",
+     "issuer": "Northwind Treasury",
+     "issuerAddress": "0xb6e7e999de032a73e3c2e0da675f43e0f3282fcf",
+     "issuedAt": "2026-06-14T10:00:00Z",
+     "expiresAt": null,
+     "revoked": true,
+     "reference": "Replaced by credential 3"
+    }
+   ],
+   "policy": {
+    "actions": [
+     "pay",
+     "swap",
+     "trade",
+     "contract"
+    ],
+    "assets": [
+     {
+      "symbol": "USDC",
+      "address": "0x0e997da8f3390653d63fa0e40d7c445066ba5a7b"
+     },
+     {
+      "symbol": "TBILL",
+      "address": "0x600257cc35d31d16a6aba6f9084a7cdc97badcb0"
+     },
+     {
+      "symbol": "REIT",
+      "address": "0xc4914c4c87d33438b5a117cdd79fb51fe461dcbb"
+     }
+    ],
+    "protocols": [
+     {
+      "name": "Swap router",
+      "address": "0x683d07a96ea1fdb9bc46f90cbcd215752c3936f5"
+     },
+     {
+      "name": "Settlement",
+      "address": "0xa1a69f1c9f5989b64288bf39ffeba1b5b0639bd6"
+     },
+     {
+      "name": "Perps venue",
+      "address": "0x302b51855837eb6da8554c69a78c378138075058"
+     }
+    ],
+    "maxTransaction": 5000,
+    "dailyLimit": 25000,
+    "spentToday": 3800,
+    "expiresAt": "2027-03-31T00:00:00Z",
+    "status": "active",
+    "updatedAt": "2026-09-02T08:00:00Z"
+   },
+   "delegations": [
+    {
+     "id": 1,
+     "ref": "D1",
+     "controller": "0xb6e7e999de032a73e3c2e0da675f43e0f3282fcf",
+     "permissions": [
+      "pay",
+      "swap",
+      "trade",
+      "contract"
+     ],
+     "spendLimit": 25000,
+     "expiresAt": "2027-03-31T00:00:00Z",
+     "status": "active",
+     "revoked": false,
+     "createdAt": "2026-06-15T11:05:00Z"
+    },
+    {
+     "id": 2,
+     "ref": "D0",
+     "controller": "0xb6e7e999de032a73e3c2e0da675f43e0f3282fcf",
+     "permissions": [
+      "pay"
+     ],
+     "spendLimit": 1000,
+     "expiresAt": "2026-07-01T00:00:00Z",
+     "status": "revoked",
+     "revoked": true,
+     "createdAt": "2026-06-14T10:00:00Z"
+    }
+   ],
+   "stats": {
+    "verifiedActions": 127
+   },
+   "activity": [
+    {
+     "type": "tx_authorized",
+     "at": "2026-09-28T16:42:00Z",
+     "detail": "Pay 1,200 USDC to settlement",
+     "amount": 1200
+    },
+    {
+     "type": "tx_rejected",
+     "at": "2026-09-28T14:10:00Z",
+     "detail": "Pay 7,500 USDC exceeds the 5,000 maximum",
+     "amount": 7500
+    },
+    {
+     "type": "tx_authorized",
+     "at": "2026-09-28T09:03:00Z",
+     "detail": "Swap 2,600 USDC for TBILL",
+     "amount": 2600
+    },
+    {
+     "type": "activity_attested",
+     "at": "2026-09-27T23:00:00Z",
+     "detail": "Daily activity attested by the controller"
+    },
+    {
+     "type": "policy_changed",
+     "at": "2026-09-02T08:00:00Z",
+     "detail": "Daily limit raised to 25,000"
+    },
+    {
+     "type": "credential_revoked",
+     "at": "2026-06-15T11:02:00Z",
+     "detail": "Capability credential 5 revoked"
+    },
+    {
+     "type": "delegation_revoked",
+     "at": "2026-06-15T11:01:00Z",
+     "detail": "Delegation D0 revoked"
+    },
+    {
+     "type": "delegation_granted",
+     "at": "2026-06-15T11:05:00Z",
+     "detail": "Delegation D1 granted for pay, swap, trade and contract"
+    },
+    {
+     "type": "credential_issued",
+     "at": "2026-06-14T09:30:00Z",
+     "detail": "Application credential issued"
+    },
+    {
+     "type": "identity_created",
+     "at": "2026-06-14T09:20:00Z",
+     "detail": "Identity MEI0842 registered"
+    }
+   ]
+  },
+  {
+   "id": 311,
+   "agentKey": "0xd24a7229a1e4caa30c84d72e99873b4b20b2b24f",
+   "controller": "0x2ad66a87b1d71a3e2af611a7d7697ae5b0089215",
+   "label": "Invoice settlement bot",
+   "application": "Helio Billing",
+   "metadataURI": "",
+   "status": "active",
+   "createdAt": "2026-05-02T12:00:00Z",
+   "credentials": [
+    {
+     "id": 11,
+     "type": "controller",
+     "issuer": "SCRIM registry",
+     "issuerAddress": "0x10f2df447dc85ed3f2d411ea107bf69bf4d81f66",
+     "issuedAt": "2026-05-02T12:01:00Z",
+     "expiresAt": null,
+     "revoked": false,
+     "reference": "Controller key verified"
+    },
+    {
+     "id": 12,
+     "type": "application",
+     "issuer": "Helio Billing",
+     "issuerAddress": "0x2ad66a87b1d71a3e2af611a7d7697ae5b0089215",
+     "issuedAt": "2026-05-02T12:10:00Z",
+     "expiresAt": "2026-08-01T00:00:00Z",
+     "revoked": false,
+     "reference": "Billing pilot"
+    }
+   ],
+   "policy": {
+    "actions": [
+     "pay"
+    ],
+    "assets": [
+     {
+      "symbol": "USDC",
+      "address": "0x0e997da8f3390653d63fa0e40d7c445066ba5a7b"
+     }
+    ],
+    "protocols": [
+     {
+      "name": "Settlement",
+      "address": "0xa1a69f1c9f5989b64288bf39ffeba1b5b0639bd6"
+     }
+    ],
+    "maxTransaction": 500,
+    "dailyLimit": 2000,
+    "spentToday": 1850,
+    "expiresAt": "2027-01-01T00:00:00Z",
+    "status": "active",
+    "updatedAt": "2026-05-02T12:20:00Z"
+   },
+   "delegations": [
+    {
+     "id": 11,
+     "ref": "D11",
+     "controller": "0x2ad66a87b1d71a3e2af611a7d7697ae5b0089215",
+     "permissions": [
+      "pay"
+     ],
+     "spendLimit": 500,
+     "expiresAt": "2026-12-31T00:00:00Z",
+     "status": "active",
+     "revoked": false,
+     "createdAt": "2026-05-02T12:20:00Z"
+    }
+   ],
+   "stats": {
+    "verifiedActions": 38
+   },
+   "activity": [
+    {
+     "type": "tx_rejected",
+     "at": "2026-09-27T10:00:00Z",
+     "detail": "Pay 400 USDC exceeds the daily limit left",
+     "amount": 400
+    },
+    {
+     "type": "tx_authorized",
+     "at": "2026-09-27T08:15:00Z",
+     "detail": "Pay 450 USDC invoice",
+     "amount": 450
+    },
+    {
+     "type": "delegation_granted",
+     "at": "2026-05-02T12:20:00Z",
+     "detail": "Delegation D11 granted for pay"
+    },
+    {
+     "type": "credential_issued",
+     "at": "2026-05-02T12:10:00Z",
+     "detail": "Application credential issued"
+    },
+    {
+     "type": "identity_created",
+     "at": "2026-05-02T12:00:00Z",
+     "detail": "Identity MEI0311 registered"
+    }
+   ]
+  },
+  {
+   "id": 77,
+   "agentKey": "0xaa892db952ef8f394b0ef1898a6a0c2fddc215f2",
+   "controller": "0xb6e7e999de032a73e3c2e0da675f43e0f3282fcf",
+   "label": "Retired market maker",
+   "application": "Northwind Treasury",
+   "metadataURI": "",
+   "status": "suspended",
+   "createdAt": "2026-02-10T08:00:00Z",
+   "credentials": [
+    {
+     "id": 21,
+     "type": "controller",
+     "issuer": "SCRIM registry",
+     "issuerAddress": "0x10f2df447dc85ed3f2d411ea107bf69bf4d81f66",
+     "issuedAt": "2026-02-10T08:01:00Z",
+     "expiresAt": null,
+     "revoked": true,
+     "reference": "Controller key rotated"
+    }
+   ],
+   "policy": {
+    "actions": [
+     "trade"
+    ],
+    "assets": [
+     {
+      "symbol": "USDC",
+      "address": "0x0e997da8f3390653d63fa0e40d7c445066ba5a7b"
+     }
+    ],
+    "protocols": [
+     {
+      "name": "Perps venue",
+      "address": "0x302b51855837eb6da8554c69a78c378138075058"
+     }
+    ],
+    "maxTransaction": 10000,
+    "dailyLimit": 50000,
+    "spentToday": 0,
+    "expiresAt": "2026-06-30T00:00:00Z",
+    "status": "paused",
+    "updatedAt": "2026-06-30T00:00:00Z"
+   },
+   "delegations": [
+    {
+     "id": 21,
+     "ref": "D21",
+     "controller": "0xb6e7e999de032a73e3c2e0da675f43e0f3282fcf",
+     "permissions": [
+      "trade"
+     ],
+     "spendLimit": 50000,
+     "expiresAt": "2026-06-30T00:00:00Z",
+     "status": "revoked",
+     "revoked": true,
+     "createdAt": "2026-02-10T08:05:00Z"
+    }
+   ],
+   "stats": {
+    "verifiedActions": 912
+   },
+   "activity": [
+    {
+     "type": "policy_changed",
+     "at": "2026-06-30T00:00:00Z",
+     "detail": "Policy paused by the controller"
+    },
+    {
+     "type": "delegation_revoked",
+     "at": "2026-06-29T18:00:00Z",
+     "detail": "Delegation D21 revoked"
+    },
+    {
+     "type": "credential_revoked",
+     "at": "2026-06-29T17:55:00Z",
+     "detail": "Controller credential revoked"
+    },
+    {
+     "type": "identity_created",
+     "at": "2026-02-10T08:00:00Z",
+     "detail": "Identity MEI0077 registered"
+    }
+   ]
+  }
+ ]
+}

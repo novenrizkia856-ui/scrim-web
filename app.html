@@ -1,0 +1,1977 @@
+<!DOCTYPE html><html data-wf-page="675835c7f4ae1fa1a79b372e" data-wf-site="675835c7f4ae1fa1a79b3733" data-wf-status="1" lang="en"><head><meta charset="utf-8"/><title>SCRIM Console | Machine Economic Identity</title><meta content="Register agent identities, issue credentials, set policies, delegate authority and verify agents on Robinhood Chain." name="description"/><meta content="SCRIM Console | Machine Economic Identity" property="og:title"/><meta content="Register agent identities, issue credentials, set policies, delegate authority and verify agents on Robinhood Chain." property="og:description"/><meta content="assets/brand/og.jpg" property="og:image"/><meta content="SCRIM Console | Machine Economic Identity" name="twitter:title"/><meta content="Register agent identities, issue credentials, set policies, delegate authority and verify agents on Robinhood Chain." name="twitter:description"/><meta content="assets/brand/og.jpg" name="twitter:image"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="css/template.css" rel="stylesheet" type="text/css"/><link href="css/scrim.css" rel="stylesheet" type="text/css"/><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="assets/brand/favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="assets/brand/webclip.png" rel="apple-touch-icon"/>
+
+
+<!-- Text selection color -->
+<style>
+::selection {
+  background-color: #E8A5F3;
+  color: #070707;
+}
+
+.hero_display {
+  user-select: none;
+}
+</style>
+
+
+
+<!-- Hide scrollbar -->
+<style>
+html {
+  scrollbar-width: none;
+}
+
+body {
+
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+</style>
+
+
+
+
+<style>
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+</style>
+
+
+
+
+<style>
+  .hidden {
+    display: none !important;
+  }
+</style>
+
+
+
+
+
+<!-- Page transition -->
+<style>
+	.load_grid{
+  	display: grid;
+  }
+</style>
+
+
+
+
+<!-- Delays loading of sections after preloader -->
+<style>
+  .lazy-section {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .lazy-section.active {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>
+
+
+
+
+
+<!-- Changes text & shadow color dynamically, adds hover mask animation -->
+<style>
+  [data-responsive-text="true"],
+  a[line-mask-link] [line-mask-text] {
+    transition: color 1s cubic-bezier(.2, 1, .3, 1), text-shadow 1s cubic-bezier(.2, 1, .3, 1);
+  }
+
+  a[line-mask-link] [line-mask-text] {
+    text-shadow: 0px 1em 0px var(--shadow-color, currentColor);
+  }
+
+  a[line-mask-link] [line-mask-text="pastel-pink"] {
+    --shadow-color: #FFDFC4;
+  }
+
+  a[line-mask-link] [line-mask-text="peach"] {
+    --shadow-color: #FFEBB0;
+  }
+</style>
+
+
+<!-- Hides the Webflow badge -->
+<style>
+  .webflow-badge {
+    display: none !important;
+  }
+</style><!-- Changes the background color or gradient of the 'change-bg' element smoothly based on the 'section-bg' attribute of the currently visible section or clicked link -->
+
+<style>
+.change-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -7;
+  background-color: #FFDFC4;
+  transition: background 1s ease;
+}
+</style></head><body><div class="load_grid"><div class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eb1-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eb2-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eb3-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eb4-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eb5-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eb6-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eb7-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eb8-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eb9-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eba-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ebb-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ebc-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ebd-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ebe-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ebf-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec0-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec1-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec2-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec3-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec4-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec5-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec6-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec7-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec8-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ec9-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eca-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ecb-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ecc-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ecd-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ece-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ecf-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed0-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed1-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed2-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed3-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed4-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed5-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed6-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed7-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed8-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ed9-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eda-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121edb-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121edc-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121edd-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ede-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121edf-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee0-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee1-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee2-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee3-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee4-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee5-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee6-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee7-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee8-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ee9-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eea-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eeb-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eec-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eed-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eee-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eef-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef0-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef1-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef2-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef3-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef4-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef5-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef6-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef7-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef8-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121ef9-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121efa-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121efb-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121efc-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121efd-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121efe-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121eff-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f00-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f01-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f02-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f03-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f04-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f05-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f06-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f07-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f08-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f09-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f0a-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f0b-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f0c-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f0d-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f0e-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f0f-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f10-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f11-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f12-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f13-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f14-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f15-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f16-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f17-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f18-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f19-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f1a-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f1b-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f1c-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f1d-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f1e-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f1f-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f20-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f21-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f22-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f23-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f24-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f25-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f26-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f27-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f28-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f29-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f2a-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f2b-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f2c-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f2d-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f2e-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f2f-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f30-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f31-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f32-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f33-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f34-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f35-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f36-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f37-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f38-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f39-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f3a-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f3b-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f3c-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f3d-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f3e-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f3f-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f40-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f41-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f42-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f43-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f44-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f45-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f46-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f47-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f48-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f49-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f4a-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f4b-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f4c-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f4d-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f4e-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f4f-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f50-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f51-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f52-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f53-d7121eaf" class="load_grid-item"></div><div id="w-node-ea7952b3-197a-f923-9dbf-2f75d7121f54-d7121eaf" class="load_grid-item"></div></div><div class="page-wrapper"><div class="custom-code"><div class="global-styles w-embed"><style>
+
+/* dds a global texture overlay to all section elements */
+section {
+  position: relative;
+}
+
+
+[class*="tw1"] {
+text-wrap: balance;
+}
+
+
+
+/* Make text look crisper and more legible in all browsers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+
+/* Set color style to inherit */
+.inherit-color * {
+    color: inherit;
+}
+
+
+section {
+  overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+
+/* disable scrolling beyond content, including "swipe off edge" on mobile */
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
+
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+
+
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+
+ 
+.margin-0 {
+  margin: 0rem !important;
+}
+  
+.padding-0 {
+  padding: 0rem !important;
+}
+
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+  
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+  
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+  
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+  
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+
+[data-z-index="-5"] { z-index: -5; }
+[data-z-index="-4"] { z-index: -4; }
+[data-z-index="-3"] { z-index: -3; }
+[data-z-index="-2"] { z-index: -2; }
+[data-z-index="-1"] { z-index: -1; }
+[data-z-index="0"] { z-index: 0; }
+[data-z-index="1"] { z-index: 1; }
+[data-z-index="2"] { z-index: 2; }
+[data-z-index="3"] { z-index: 3; }
+[data-z-index="4"] { z-index: 4; }
+[data-z-index="5"] { z-index: 5; }
+[data-z-index="6"] { z-index: 6; }
+[data-z-index="7"] { z-index: 7; }
+[data-z-index="8"] { z-index: 8; }
+[data-z-index="9"] { z-index: 9; }
+[data-z-index="10"] { z-index: 10; }
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes scaleup {
+  from {opacity: 0; transform: scale(0.5);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+
+@keyframes scaleup2 {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+</style></div><div class="body-font-styles w-embed"><style>
+@media screen and (min-width: 5120px) {
+  body {
+    font-size: 0.7vw;
+  }
+}
+@media screen and (min-width: 2560px) {
+  body {
+    font-size: 0.8vw;
+  }
+}
+@media screen and (min-width: 1920px) and (max-width: 2559px) {
+  body {
+    font-size: 0.85vw;
+  }
+}
+@media screen and (min-width: 1680px) and (max-width: 1919px) {
+  body {
+    font-size: 0.9vw;
+  }
+}
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 0.95vw;
+  }
+}
+</style></div><div class="fluid-responsive w-embed"><style>
+  html { font-size: 3.25rem; }
+  @media screen and (max-width:5120px) { html { font-size: calc(0.050000000000000044rem + 1vw); } }
+  @media screen and (max-width:1920px) { html { font-size: calc(0.24999999999999944rem + 0.8333333333333338vw); } }
+  @media screen and (max-width:1680px) { html { font-size: calc(0.25rem + 0.8333333333333333vw); } }
+  @media screen and (max-width:1440px) { html { font-size: 1rem; } }
+</style></div><div class="blinking-blocks w-embed w-script"><!-- Alternating blinking animation for elements with class "blinking-decor-block" when in viewport -->
+<style>
+.blinking-decor-block {
+  animation: blinking-opacity 1.67s linear infinite;
+}
+
+.blinking-decor-block:nth-child(2) {
+  animation-delay: 0.83s;
+}
+
+@keyframes blinking-opacity {
+  0%, 40% {
+    opacity: 1;
+  }
+  50%, 90% {
+    opacity: 0.3;
+  }
+}
+</style>
+
+
+
+<style>
+/* 1680px */
+@media screen and (min-width: 1680px) {
+  .blinking-decor-block {
+    height: 0.71em;
+    min-width: 0.71em;
+  }
+
+  .blinking-decor-block.is-28 {
+    height: 0.71em;
+    min-width: 1.90em;
+  }
+}
+
+/* 1920px */
+@media screen and (min-width: 1920px) {
+  .blinking-decor-block {
+    height: 0.68em;
+    min-width: 0.68em;
+  }
+
+  .blinking-decor-block.is-28 {
+    height: 0.68em;
+    min-width: 1.77em;
+  }
+}
+
+/* 5120px */
+@media screen and (min-width: 5120px) {
+  .blinking-decor-block {
+    height: 0.55em;
+    min-width: 0.55em;
+  }
+
+  .blinking-decor-block.is-28 {
+    height: 0.55em;
+    min-width: 1.48em;
+  }
+}
+</style>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const elements = entry.target.querySelectorAll(".blinking-decor-block");
+        if (entry.isIntersecting) {
+          elements.forEach((el) => el.classList.remove("inactive"));
+        } else {
+          elements.forEach((el) => el.classList.add("inactive"));
+        }
+      });
+    });
+
+    const target = document.querySelector(".blinking-decor-block-wrap");
+    if (target) observer.observe(target);
+  });
+</script></div><div class="changes-text-color-and-mask w-embed w-script"><!-- Changes text & shadow color dynamically, adds hover mask animation -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("[data-text-color]");
+  const responsiveTexts = document.querySelectorAll("[data-responsive-text='true']");
+  const lineMaskLinks = document.querySelectorAll("[line-mask-link]");
+  const menu = document.querySelector("[data-menu]");
+
+  const defaultColor = "#070707";
+  const defaultBgColor = "transparent";
+
+  responsiveTexts.forEach((textElement) => {
+    textElement.style.color = defaultColor;
+    textElement.style.backgroundColor = defaultBgColor;
+    textElement.style.setProperty("--shadow-color", defaultColor);
+  });
+
+  let activeColor = defaultColor;
+  let activeBgColor = defaultBgColor;
+
+  function getActiveSection() {
+    let foundSection = null;
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.5) {
+        foundSection = section;
+      }
+    });
+    return foundSection;
+  }
+
+  function updateTextColor() {
+    const activeSection = getActiveSection();
+    if (activeSection) {
+      activeColor = activeSection.getAttribute("data-text-color") || defaultColor;
+      activeBgColor = activeSection.getAttribute("data-bg-color") || defaultBgColor;
+    } else {
+      activeColor = defaultColor;
+      activeBgColor = defaultBgColor;
+    }
+
+    responsiveTexts.forEach((textElement) => {
+      textElement.style.color = activeColor;
+      textElement.style.backgroundColor = activeBgColor;
+      textElement.style.setProperty("--shadow-color", activeColor);
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activeColor = entry.target.getAttribute("data-text-color") || defaultColor;
+          activeBgColor = entry.target.getAttribute("data-bg-color") || defaultBgColor;
+        }
+      });
+
+      updateTextColor();
+    },
+    { threshold: 0.5 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  if (menu) {
+    menu.addEventListener("transitionend", updateTextColor);
+    menu.addEventListener("click", updateTextColor);
+  }
+
+  lineMaskLinks.forEach((link) => {
+    const lines = link.querySelectorAll("[line-mask-text]");
+
+    link.addEventListener("mouseenter", function () {
+      gsap.to(lines, {
+        yPercent: -100,
+        duration: 0.2,
+        ease: "ease",
+        overwrite: true,
+      });
+    });
+
+    link.addEventListener("mouseleave", function () {
+      gsap.to(lines, {
+        yPercent: 0,
+        duration: 0.2,
+        ease: "ease",
+      });
+    });
+  });
+
+  setTimeout(updateTextColor, 100);
+
+  let scrollTimeout;
+  window.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(updateTextColor, 80);
+  });
+});
+</script></div><div class="hover-slide-tooltip-text w-embed w-script"><!-- Enables slide-up animation for text elements inside hover trigger, with custom delay and speed -->
+<style>
+.dynamic-mask {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.dynamic-mask span {
+  display: block;
+  position: relative;
+  transform: translateY(100%);
+  animation-name: slideup;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation-play-state: paused;
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+</style>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const triggerElements = document.querySelectorAll('[data-hover-slide-trigger]');
+
+  triggerElements.forEach((trigger) => {
+    const animatedElements = trigger.querySelectorAll('[data-animation="slideup"]');
+    
+    animatedElements.forEach((el) => {
+      const mask = document.createElement("div");
+      mask.classList.add("dynamic-mask");
+
+      const span = document.createElement("span");
+      span.innerHTML = el.innerHTML.trim();
+
+      mask.appendChild(span);
+      el.innerHTML = "";
+      el.appendChild(mask);
+    });
+
+    trigger.addEventListener("mouseenter", () => {
+      const masks = trigger.querySelectorAll(".dynamic-mask span");
+      masks.forEach((span) => {
+        const parent = span.closest('[data-animation="slideup"]');
+        const delay = parseFloat(parent.getAttribute("slide-delay") || "0");
+        const speed = parseFloat(parent.getAttribute("slide-speed") || "0.5");
+
+        span.style.animation = "none";
+        void span.offsetWidth;
+        span.style.animation = `slideup ${speed}s ${delay}s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards`;
+      });
+    });
+
+    trigger.addEventListener("mouseleave", () => {
+      const masks = trigger.querySelectorAll(".dynamic-mask span");
+      masks.forEach((span) => {
+        span.style.animation = "none";
+      });
+    });
+  });
+});
+</script></div><div class="section-texture w-embed"><style>
+section::before {
+  content: "";
+  background-image: url("assets/images/dots-grid-dark-coral.svg");
+  background-size: 33px auto;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+#case2-hero::before {
+  background-image: url("assets/images/dots-grid-pink-100.svg");
+  opacity: 0.17;
+}
+
+#section-info-2::before {
+  background-image: url("assets/images/dots-grid-pink-100.svg");
+  opacity: 0.17;
+}
+
+
+section[data-no-texture]::before {
+  content: none;
+}
+
+
+/* 1680px */
+@media screen and (min-width: 1680px) {
+  section::before {
+    background-size: 33px auto;
+  }
+}
+
+/* 1920px */
+@media screen and (min-width: 1920px) {
+  section::before {
+    background-size: 38px auto;
+  }
+}
+
+/* 5120px */
+@media screen and (min-width: 5120px) {
+  section::before {
+    background-size: 82px auto;
+  }
+}
+</style></div><div class="primary-button-css w-embed"><style>
+.cta_arrow {
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.cta-primary:hover .cta_arrow.is-1 {
+  animation: arrow-fade 0.75s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.cta-primary:hover .cta_arrow.is-2 {
+  animation: arrow-fade 0.75s ease-in-out infinite;
+  animation-delay: 0.25s;
+}
+
+.cta-primary:hover .cta_arrow.is-3 {
+  animation: arrow-fade 0.75s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes arrow-fade {
+  0%, 50% {
+    opacity: 0.25;
+  }
+  51%, 100% {
+    opacity: 1;
+  }
+}
+</style></div><div class="hide-css w-embed"><style>
+/* --------------- These classes are never overwritten -------------------- */
+/* Always hidden */
+.hide {
+  display: none !important;
+}
+
+/* 1) Hidden only on Desktop (992px and above) */
+@media screen and (min-width: 992px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* 2) Hidden only on Desktop and all Mobile */
+@media screen and (min-width: 992px), screen and (max-width: 767px) {
+    .hide-desktop-mobile {
+        display: none !important;
+    }
+}
+
+/* 3) Hidden only on Desktop + Tablet */
+@media screen and (min-width: 768px) {
+    .hide-desktop-tablet {
+        display: none !important;
+    }
+}
+
+/* 4) Hidden on all screens */
+.hide-all {
+    display: none !important;
+}
+
+/* 5) Hidden only on Tablet (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .hide-tablet {
+        display: none !important;
+    }
+}
+
+/* 6) Hidden only on Mobile Landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .hide-mobile-landscape {
+        display: none !important;
+    }
+}
+
+/* 7) Hidden only on Mobile Portrait */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    .hide-mobile-portrait {
+        display: none !important;
+    }
+}
+
+/* 8) Hidden only on all Mobile */
+@media screen and (max-width: 767px) {
+    .hide-mobile-all {
+        display: none !important;
+    }
+}
+
+/* 9) Hidden only on all Adaptives (Tablet + Mobile) */
+@media screen and (max-width: 991px) {
+    .hide-adaptives {
+        display: none !important;
+    }
+}
+</style></div><div class="disables-copy-image w-embed w-script"><!-- Blocks drag and drop and right click for img, svg and links -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.addEventListener("contextmenu", (e) => {
+      if (e.target.tagName === "IMG" || e.target.tagName === "SVG") {
+        e.preventDefault();
+      }
+    });
+
+    document.querySelectorAll("img, a, svg").forEach(el => {
+      el.setAttribute("draggable", "false");
+    });
+  });
+</script></div><div class="footer_corners-code w-embed"><style>
+/* Preloader Corners */
+@keyframes corner-fade {
+  0%, 85% {
+    opacity: 1;
+  }
+  86%, 100% {
+    opacity: 0;
+  }
+}
+
+.preloader_corner {
+  animation: corner-fade 0.9s linear infinite;
+  animation-fill-mode: forwards;
+}
+</style></div><div class="icon-x w-embed"><style>
+  .responsive-svg {
+    display: block;
+    width: 0.52em;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+@media screen and (min-width: 1680px) {
+  .responsive-svg {
+    width: 0.66em;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .responsive-svg {
+    width: 0.64em;
+  }
+}
+
+@media screen and (min-width: 5120px) {
+  .responsive-svg {
+    width: 0.68em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .responsive-svg {
+    width: 1.1em;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .responsive-svg {
+    width: 1.85em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .responsive-svg {
+    width: 2.02em;
+  }
+}
+</style></div></div><div class="change-bg"></div><div class="frame"><div class="frame_box"><div class="frame_border-top"></div><div class="frame_border-bottom"></div><div class="frame_border-left"></div><div class="frame_border-right"></div></div><div class="frame_corners"><img loading="lazy" src="assets/images/corner_border_LT.svg" alt="" class="corner_frame is-left-top"/><img loading="lazy" src="assets/images/corner_border_LB.svg" alt="" class="corner_frame is-left-bottom"/><img loading="lazy" src="assets/images/corner_border_RT.svg" alt="" class="corner_frame is-right-top"/><img loading="lazy" src="assets/images/corner_border_RB.svg" alt="" class="corner_frame is-right-bottom"/></div><div class="frame_cutout"><img loading="lazy" src="assets/images/frame_border_Right.svg" alt="" class="frame_cutout_vertical is-right"/><img loading="lazy" src="assets/images/frame_border_Left.svg" alt="" class="frame_cutout_vertical is-left"/><img loading="lazy" src="assets/images/frame_border_Top.svg" alt="" class="frame_cutout_horizont is-top"/><img loading="lazy" src="assets/images/frame_border_Bottom.svg" alt="" class="frame_cutout_horizont is-bottom"/></div><div class="frame_corners-white"><img loading="lazy" src="assets/images/corner_main_decor_LT.svg" alt="" class="corner_main_shape is-left-top"/><img loading="lazy" src="assets/images/corner_main_decor_RT.svg" alt="" class="corner_main_shape is-right-top"/><img loading="lazy" src="assets/images/corner_main_decor_LB.svg" alt="" class="corner_main_shape is-left-bottom"/><img loading="lazy" src="assets/images/corner_main_decor_RB.svg" alt="" class="corner_main_shape is-right-bottom"/></div><div class="frame_progress-bar"><div class="progress-bar-wrap"><div class="progress-bar"><div class="progresbar_dot-1"></div><div class="progress_line"><div class="progress_time-line"></div></div><div class="progresbar_dot-2"></div></div></div><div class="progress-bar-wrap"><div class="progress-bar"><div class="progresbar_dot-1"><div class="progress_time-line"></div></div><div class="progress_line"><div class="progress_time-line"></div></div><div class="progresbar_dot-2"><div class="progress_time-line"></div></div></div></div><div class="progress-bar-js w-embed w-script"><script>
+  document.addEventListener("scroll", () => {
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollTop = window.scrollY;
+    const scrollPercent = Math.min((scrollTop / scrollHeight) * 100, 100);
+
+    document.querySelectorAll(".progress-bar-wrap").forEach((progressBarWrap) => {
+      const dot1 = progressBarWrap.querySelector(".progresbar_dot-1");
+      const line = progressBarWrap.querySelector(".progress_line .progress_time-line");
+      const dot2 = progressBarWrap.querySelector(".progresbar_dot-2");
+
+      if (scrollPercent <= 3) {
+        gsap.set(dot1, { backgroundColor: "#393736" });
+      }
+
+      if (scrollPercent > 3 && scrollPercent <= 10) {
+        gsap.to(dot1, {
+          backgroundColor: "#A6A19D",
+          duration: 0.2,
+          overwrite: "auto"
+        });
+      }
+
+      if (scrollPercent > 10 && scrollPercent <= 95) {
+        const heightPercent = ((scrollPercent - 10) / 85) * 100;
+        gsap.set(line, { height: `${heightPercent}%` });
+      }
+
+      if (scrollPercent >= 99.9) {
+        gsap.set(line, { height: "100%" });
+      }
+
+      if (scrollPercent <= 10) {
+        gsap.set(line, { height: "0%" });
+      }
+
+      if (scrollPercent > 95) {
+        gsap.to(dot2, {
+          backgroundColor: "#A6A19D",
+          duration: 0.2,
+          overwrite: "auto"
+        });
+      } else {
+        gsap.to(dot2, {
+          backgroundColor: "#393736",
+          duration: 0.2,
+          overwrite: "auto"
+        });
+      }
+    });
+  });
+</script></div></div></div><main class="main-wrapper"><nav class="nav_fixed"><div class="navbar-code w-embed w-script"><style>
+  .nav_content-left,
+  .nav_content-right {
+    opacity: 1;
+  }
+
+  .nav_content-left-2,
+  .nav_content-right-2 {
+    opacity: 0;
+  }
+
+  .menu-link-hover [nav-number-left],
+  .menu-link-hover [nav-number-right] {
+    width: 2.5ch;
+    transform: scale(1);
+    opacity: 1;
+    overflow: hidden;
+    display: inline-block;
+    transition: width 1s cubic-bezier(.2, 1, .3, 1),
+                transform 1s cubic-bezier(.2, 1, .3, 1),
+                opacity 1s cubic-bezier(.2, 1, .3, 1);
+  }
+
+  .menu-link-hover [nav-number-left] {
+    transform-origin: right bottom;
+  }
+
+  .menu-link-hover [nav-number-right] {
+    transform-origin: left bottom;
+  }
+
+  .menu-link-hover:hover [nav-number-left] {
+    width: 2.5ch;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .menu-link-hover:hover [nav-number-right] {
+    width: 0ch;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .menu-link-hover:not(:hover) [nav-number-left] {
+    width: 0ch;
+    transform: scale(0);
+    opacity: 0;
+    transition-duration: 0.5s;
+  }
+
+  .menu-link-hover:not(:hover) [nav-number-right] {
+    width: 2.5ch;
+    transform: scale(1);
+    opacity: 1;
+    transition-duration: 0.5s;
+  }
+</style>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", initNavbar);
+
+  function initNavbar() {
+    const elements = {
+      navButton: document.querySelector(".nav_button"),
+      closeTriggers: document.querySelectorAll("[nav-close-trigger]"),
+      hoverPairs: [
+        {
+          trigger: document.querySelector("[anturax-nav-hover]"),
+          from: document.querySelector(".nav_content-left"),
+          to: document.querySelector(".nav_content-left-2"),
+        },
+        {
+          trigger: document.querySelector("[oraniths-nav-hover]"),
+          from: document.querySelector(".nav_content-right"),
+          to: document.querySelector(".nav_content-right-2"),
+        }
+      ]
+    };
+
+    if (elements.navButton) {
+      document.addEventListener("click", (e) => {
+        if (e.target.closest("[nav-close-trigger]")) {
+          elements.navButton.click();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          const isVisible = Array.from(elements.closeTriggers).some(
+            el => el.offsetParent !== null
+          );
+          if (isVisible) {
+            elements.navButton.click();
+          }
+        }
+      });
+    }
+
+    elements.hoverPairs.forEach(({ trigger, from, to }) => {
+      if (trigger && from && to) {
+        bindOpacityToggle(trigger, from, to);
+      }
+    });
+  }
+
+  function bindOpacityToggle(trigger, from, to) {
+    trigger.addEventListener("mouseenter", () => {
+      gsap.set(from, { opacity: 0, overwrite: "auto" });
+      gsap.set(to, { opacity: 1, overwrite: "auto" });
+    });
+
+    trigger.addEventListener("mouseleave", () => {
+      gsap.set(from, { opacity: 1, overwrite: "auto" });
+      gsap.set(to, { opacity: 0, overwrite: "auto" });
+    });
+  }
+</script></div><div class="nav_component"><div class="padding-navbar"><div class="nav_container"><a aria-label="sound" data-sound-mode="" data-sound-hover="" data-sound-click="" line-mask-link="" data-responsive-text="true" href="#" class="nav_menu-sound text-size-architekt-11 w-inline-block"><div class="flex-horizontal-4px overflow-hidden is-center-left"><div class="icon_sound hide w-embed"><style>
+  .icon_sound {
+    width: 3.19vw;
+    height: 0.97vw;
+    -webkit-mask-image: url(assets/images/icon-sound-box.svg);
+    mask-image: url(assets/images/icon-sound-box.svg);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background-color: black;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .icon_sound {
+      width: 5.98vw;
+      height: 1.82vw;
+    }
+  }
+
+@media screen and (max-width: 568px) {
+  .icon_sound {
+    width: 8.89vw;
+    height: 2.70vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .icon_sound {
+    width: 13.48vw;
+    height: 4.1vw;
+  }
+}
+</style></div><div class="icon_sound"><div sound-panel="" class="icon_sound-image"></div><div sound-panel-2="" class="icon_sound-lottie" data-w-id="a1c90930-667f-6580-9310-35eb98a07a61" data-animation-type="lottie" data-src="assets/lottie/Sound-wave.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="0" data-loading="eager"></div></div><div aria-hidden="true" class="sound_wrap"><div auto-color="" class="sound_clip"><div sound-panel="" class="sound_panel"><div line-mask-text="" data-sound-text-off="on" class="sound_text">OFF</div></div><div sound-panel-2="" class="sound_panel-2"><div line-mask-text="" data-sound-text-on="off" class="sound_text">ON</div></div></div></div></div></a><div class="nav_page-state"><a aria-label="SCRIM home" line-mask-link="" data-sound-hover="" data-sound-click="" href="index.html" class="nav_link-index w-inline-block"><div class="overflow-hidden"><p id="section-indicator" data-text="currentSection" data-speed="5" data-animation="random" line-mask-text="pastel-pink" class="text-size-architekt-11 is-linehight-0-85em">scrim // console</p></div></a><div class="clickable-off"></div></div><div class="nav_menu"><div class="nav_in-frame"><div class="frame_box is-menu"><div class="frame_border-top"></div><div class="frame_border-bottom"></div><div class="frame_border-left"></div><div class="frame_border-right"></div></div><div class="frame_corners is-menu"><img loading="lazy" src="assets/images/corner_border_LB.svg" alt="" class="corner_frame is-left-bottom"/><img loading="lazy" src="assets/images/corner_border_RB.svg" alt="" class="corner_frame is-right-bottom"/></div><div class="frame_cutout is-menu"><img loading="lazy" src="assets/images/frame_border_Right.svg" alt="" class="frame_cutout_vertical is-right"/><img loading="lazy" src="assets/images/frame_border_Left.svg" alt="" class="frame_cutout_vertical is-left"/><img loading="lazy" src="assets/images/frame_border_Bottom.svg" alt="" class="frame_cutout_horizont is-bottom"/></div><div class="nav_menu-links-wrap"><div id="w-node-a1c90930-667f-6580-9310-35eb98a07a7c-98a07a54" class="nav_menu-bg"></div><div id="w-node-a1c90930-667f-6580-9310-35eb98a07a7d-98a07a54" class="w-layout-grid nav_menu-links-content"><div class="flex-between-horiz is-menu-content"><div><div class="blinking-decor-block-wrap"><div class="blinking-decor-block is-28-pastel-pink"></div><div class="blinking-decor-block is-28-pastel-pink"></div></div><div class="spacer-paragraph"></div><div class="w-layout-hflex"><p data-delay="1" data-text="agents {" data-speed="6" data-start-100="">agents {</p></div></div><div><img src="assets/images/shape-x-main-color.svg" loading="lazy" alt="" class="responsive-svg is-right"/><div class="spacer-paragraph"></div><div class="flex-horizontal-7px"><div class="blinking-decor-block-wrap"><div class="blinking-decor-block is-pastel-pink"></div><div class="blinking-decor-block is-pastel-pink"></div></div><p data-delay="1" data-text="Fleet" data-speed="6" data-start-100="">Fleet</p></div></div></div><div class="w-layout-grid nav_content"><div class="nav_image"><div class="nav_content-left"></div><div class="nav_content-left-2"></div></div><div id="w-node-a1c90930-667f-6580-9310-35eb98a07a94-98a07a54" class="w-layout-vflex nav_content-center"><a data-sound-click="" data-sound-hover="" href="index.html" class="menu-link-hover w-inline-block"><div nav-number-right="" class="text-point-number-22 nav_pont-number-left">00.</div><h3>index</h3><div nav-number-left="" class="text-point-number-22 nav_pont-number-left">00.</div></a><div class="w-layout-vflex gap-12px flex-center"><p data-start-100="" data-text="the dapp" data-delay="1" data-speed="5" data-animation="random" class="text-color-pastel-pink-100 align-center">the dapp</p><a oraniths-nav-hover="" data-sound-hover="" data-sound-click="" href="app.html#dashboard" aria-current="page" class="menu-link-hover w-inline-block w--current"><div nav-number-right="" class="text-point-number-22 nav_pont-number-right">01.</div><h3 data-delay="1" data-text="Console" data-speed="6" data-start-100="">Console</h3><div nav-number-left="" class="text-point-number-22 nav_pont-number-left">01.</div></a><a id="nav-link-image" data-sound-hover="" data-sound-click="" anturax-nav-hover="" href="app.html#verify" class="menu-link-hover is-anturax-nav w-node-a1c90930-667f-6580-9310-35eb98a07aa6-98a07a54 w-inline-block"><div nav-number-right="" class="text-point-number-22 nav_pont-number-right">02.</div><h3 data-delay="1" data-text="Verify" data-speed="6" data-start-100="">Verify</h3><div nav-number-left="" class="text-point-number-22 nav_pont-number-left">02.</div></a></div></div><div class="nav_image"><div class="nav_content-right"></div><div class="nav_content-right-2"></div></div></div><div class="flex-between-horiz is-menu"><div class="flex-vertical-4px is-menu-left"><p data-start-100="" data-text="NETWORK:" data-delay="1" data-speed="5" data-animation="random">NETWORK:</p><a data-sound-click="" line-mask-link="" data-sound-hover="" href="app.html#network" class="link-block is-align-left w-inline-block"><div class="overflow-hidden"><p line-mask-text="pastel-pink" data-text="Robinhood Chain" data-delay="1" data-speed="5" data-animation="random" data-start-100="" class="text-color-pastel-pink-main">Robinhood Chain</p></div></a><a data-sound-click="" line-mask-link="" data-sound-hover="" href="app.html#network" class="link-block is-align-left w-inline-block"><div class="overflow-hidden"><p line-mask-text="pastel-pink" data-text="Chain ID 4663" data-delay="1" data-speed="5" data-animation="random" data-start-100="" class="text-color-pastel-pink-main">Chain ID 4663</p></div></a></div><div class="flex-between-horiz is-padding-12 is-top hide-adaptives"><div class="flex-vertical-4px is-nav-left"><p data-start-100="" data-text="project:" data-delay="1" data-speed="5" data-animation="random">project:</p><p data-start-100="" data-text="Machine Economic Identity" data-delay="1" data-speed="5" data-animation="random" class="text-color-pastel-pink-main">Machine Economic Identity</p></div><div class="flex-vertical-4px is-nav-left"><p data-start-100="" data-text="LEGAL:" data-delay="1" data-speed="5" data-animation="random">LEGAL:</p><p data-start-100="" data-text="©2026 SCRIM" data-delay="1" data-speed="5" data-animation="random" class="text-color-pastel-pink-main">©2026 SCRIM</p></div></div><div id="w-node-a1c90930-667f-6580-9310-35eb98a07ac7-98a07a54" class="flex-vertical-4px is-nav-right"><p data-start-100="" data-text="CONTRACTS" data-delay="1" data-speed="5" data-animation="random">CONTRACTS</p><p data-start-100="" data-text="STATUS:" data-delay="1" data-speed="5" data-animation="random">STATUS:</p><a data-sound-click="" line-mask-link="" data-sound-hover="" href="app.html#network" class="link-block is-align-right w-inline-block"><div class="overflow-hidden"><p line-mask-text="pastel-pink" data-text="Deployment pending" data-delay="1" data-speed="5" data-animation="random" data-start-100="" class="text-color-pastel-pink-main">Deployment pending</p></div></a></div></div></div><div id="w-node-a1c90930-667f-6580-9310-35eb98a07ace-98a07a54" class="nav_menu-bottom-bg"></div></div><div wb-data="close" nav-close-trigger="" class="nav-close-trigger"></div><img loading="lazy" src="assets/images/corner_border_RT.svg" alt="" class="corner_frame is-right-top is-menu"/><img loading="lazy" src="assets/images/corner_border_LT.svg" alt="" class="corner_frame is-left-top is-menu"/><img loading="lazy" src="assets/images/frame_border_Top.svg" alt="" class="frame_cutout_horizont is-top is-menu"/><div class="frame_corners-white"><img loading="lazy" src="assets/images/corner_main_decor_LT.svg" alt="" class="corner_main_shape is-left-top"/><img loading="lazy" src="assets/images/corner_main_decor_RT.svg" alt="" class="corner_main_shape is-right-top"/><img loading="lazy" src="assets/images/corner_main_decor_LB.svg" alt="" class="corner_main_shape is-left-bottom"/><img loading="lazy" src="assets/images/corner_main_decor_RB.svg" alt="" class="corner_main_shape is-right-bottom"/></div></div><div data-text-color="#FFDFC4" class="trigger-nav-text-color"></div></div><a data-responsive-text="true" aria-label="menu" data-sound-hover="" data-sound-click="" data-w-id="a1c90930-667f-6580-9310-35eb98a07ad8" href="#" class="nav_button text-size-architekt-11 w-inline-block"><div aria-hidden="true" class="hamburger_8_wrap"><div class="hamburger_embed w-embed"><style>
+.hamburger_8_wrap:hover .hamburger_8_text,
+.w--open .hamburger_8_panel {
+	transform: translateY(-100%);
+}
+</style></div><div class="hamburger_8_clip"><div data-nav-text="" class="nav_panel-menu"><div class="hamburger_8_text">MENU</div><div class="hamburger_8_text is-2">MENU</div></div><div class="nav_panel-close"><div class="hamburger_8_text">CLOSE</div><div class="hamburger_8_text is-2">CLOSE</div></div></div></div></a><div class="index_text_wrap"><div class="blank"></div><div id="coordinates-wrap" class="flex-horizontal-1rem hide-adaptives"><div class="flex-horizontal-1px"><div class="text-size-architekt-11">X</div><div class="text-size-architekt-11">.</div><div id="x-coordinate" class="text-size-architekt-11 max-4ch">0124</div></div><div class="text-size-architekt-11">//</div><div class="flex-horizontal-1px"><div class="text-size-architekt-11">Y</div><div class="text-size-architekt-11">.</div><div id="y-coordinate" class="text-size-architekt-11 max-4ch">1367</div></div><div class="coordinates-js w-embed w-script"><!-- Optimized mouse coordinates display -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) return;
+
+    const xCoord = document.getElementById("x-coordinate");
+    const yCoord = document.getElementById("y-coordinate");
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let lastX = -1;
+    let lastY = -1;
+    let ticking = false;
+
+    function formatNumber(num) {
+      return num.toString().padStart(4, "0");
+    }
+
+    function updateCoordinates() {
+      if (mouseX !== lastX || mouseY !== lastY) {
+        xCoord.textContent = formatNumber(mouseX % 10000);
+        yCoord.textContent = formatNumber(mouseY % 10000);
+        lastX = mouseX;
+        lastY = mouseY;
+      }
+      ticking = false;
+    }
+
+    document.addEventListener("mousemove", (event) => {
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateCoordinates);
+      }
+    });
+  });
+</script></div></div><div data-delay="1" data-text="Identity" data-speed="10" data-start-100="" class="text-size-architekt-11 hide-desktop-mobile">Identity</div></div></div></div></div></nav><section id="section-console" data-title="scrim // console" section-bg="#FFDFC4" class="section_app">
+<div class="padding-global app_pad"><div class="container-large app_wrap">
+
+<header class="app_head">
+  <div class="app_head-left">
+    <div class="flex-horizontal-3px"><img src="assets/images/shape-x.svg" alt="" class="responsive-svg"/><img src="assets/images/shape-x.svg" alt="" class="responsive-svg"/><img src="assets/images/shape-x.svg" alt="" class="responsive-svg"/></div>
+    <div class="spacer-paragraph"></div>
+    <p>CONSOLE_V1</p>
+    <div class="spacer-paragraph"></div>
+    <p>&lt;META CHAIN=4663&gt;</p>
+    <div class="spacer-paragraph"></div>
+    <p class="app_mode" data-mode-label>LOADING</p>
+  </div>
+  <div class="app_head-title">
+    <h2 class="app_title" data-text="console" data-speed="6" data-delay="1">console</h2>
+    <p class="text-size-space-grotesk-15 app_lede">Identity, credentials, permissions and delegation for autonomous agents on Robinhood Chain.</p>
+  </div>
+  <div class="app_head-right" data-wallet-panel>
+    <div class="blinking-decor-block-wrap is-right"><div class="blinking-decor-block"></div><div class="blinking-decor-block"></div></div>
+    <div class="spacer-paragraph"></div>
+    <p>NETWORK: <span data-net-label>ROBINHOOD CHAIN</span></p>
+    <div class="spacer-paragraph"></div>
+    <p>WALLET: <span data-wallet-label>NOT CONNECTED</span></p>
+    <div class="spacer-paragraph"></div>
+    <div class="app_wallet-actions">
+      <button type="button" class="link-block app_link" data-wallet-switch hidden><span class="overflow-hidden"><span line-mask-text="">[ switch network ]</span></span></button>
+      <button type="button" class="link-block app_link" data-wallet-copy hidden><span class="overflow-hidden"><span line-mask-text="">[ copy address ]</span></span></button>
+      <button type="button" class="link-block app_link" data-wallet-disconnect hidden><span class="overflow-hidden"><span line-mask-text="">[ disconnect ]</span></span></button>
+    </div>
+    <div class="spacer-paragraph"></div>
+    <button type="button" class="cta-primary app_cta" data-wallet-connect data-sound-hover="" data-sound-click="">
+      <span class="cta_box-bg"><span class="cta_base_wrap"><img src="assets/images/cta_mini_base.svg" alt="" class="cta_base_img"/></span><span class="cta_face_wrap"><img src="assets/images/cta_mini_face.svg" alt="" class="cta_face_img"/></span></span>
+      <span class="cta_box-content"><span class="cta_text_wrap"><span class="overflow-hidden linehight-1"><span line-mask-text="peach" data-wallet-cta>CONNECT</span></span></span>
+      <span class="cta_block_wrap"><span class="flex-horizontal-2px is-button"><img src="assets/images/button-arrow.svg" alt="" class="cta_arrow is-1"/><img src="assets/images/button-arrow.svg" alt="" class="cta_arrow is-2"/><img src="assets/images/button-arrow.svg" alt="" class="cta_arrow is-3"/></span><img src="assets/images/cta_mini_block.svg" alt="" class="cta_block_img"/></span></span>
+    </button>
+  </div>
+</header>
+
+<div class="app_notice" data-notice hidden></div>
+
+<nav class="app_tabs" aria-label="Console sections" data-lenis-prevent="">
+  <a href="#dashboard" class="app_tab" data-tab="dashboard"><span class="text-point-number-22">01</span><span class="app_tab-label">Dashboard</span></a>
+  <a href="#identity" class="app_tab" data-tab="identity"><span class="text-point-number-22">02</span><span class="app_tab-label">Identity</span></a>
+  <a href="#credentials" class="app_tab" data-tab="credentials"><span class="text-point-number-22">03</span><span class="app_tab-label">Credentials</span></a>
+  <a href="#policies" class="app_tab" data-tab="policies"><span class="text-point-number-22">04</span><span class="app_tab-label">Policies</span></a>
+  <a href="#delegation" class="app_tab" data-tab="delegation"><span class="text-point-number-22">05</span><span class="app_tab-label">Delegation</span></a>
+  <a href="#verify" class="app_tab" data-tab="verify"><span class="text-point-number-22">06</span><span class="app_tab-label">Verify</span></a>
+  <a href="#activity" class="app_tab" data-tab="activity"><span class="text-point-number-22">07</span><span class="app_tab-label">Activity</span></a>
+  <a href="#network" class="app_tab" data-tab="network"><span class="text-point-number-22">08</span><span class="app_tab-label">Network</span></a>
+</nav>
+
+<div class="app_agentbar app_sheet" data-agentbar>
+  <div class="app_agentbar-left">
+    <p class="text-color-pastel-pink-main">ACTIVE AGENT</p>
+    <div class="app_agent-list" data-agent-list><p class="app_muted">Loading agents</p></div>
+  </div>
+  <form class="app_lookup" data-lookup novalidate>
+    <div class="demo-input-group app_field">
+      <input class="demo-input-field w-input" name="agent" placeholder=" " type="text" id="lookup-agent" autocomplete="off" spellcheck="false" aria-label="Agent ID or key address"/>
+      <label for="lookup-agent" class="demo-label">Agent ID or key address:</label>
+    </div>
+    <button type="submit" class="link-block app_link"><span class="overflow-hidden"><span line-mask-text="">[ look up ]</span></span></button>
+    <p class="app_field-error" data-lookup-error hidden></p>
+  </form>
+</div>
+
+<!-- 01 Dashboard -->
+<div class="app_panel" data-panel="dashboard">
+  <div class="app_panel-head">
+    <p class="text-point-number">.01</p>
+    <div><h3 class="app_h" data-text="Dashboard" data-speed="6" data-start-100="">Dashboard</h3><p class="text-size-space-grotesk-15 app_lede">One view of who the agent is, who controls it and what it may do.</p></div>
+  </div>
+  <div data-view="dashboard"><p class="app_muted">Loading</p></div>
+</div>
+
+<!-- 02 Identity -->
+<div class="app_panel" data-panel="identity" hidden>
+  <div class="app_panel-head">
+    <p class="text-point-number">.02</p>
+    <div><h3 class="app_h" data-text="Identity" data-speed="6" data-start-100="">Identity</h3><p class="text-size-space-grotesk-15 app_lede">A persistent record for each agent. It binds the agent key to its controller.</p></div>
+  </div>
+  <div class="app_cols">
+    <div data-view="identity"><p class="app_muted">Loading</p></div>
+    <form class="app_sheet app_form" data-form="registerAgent" novalidate>
+      <p class="text-color-pastel-pink-main">REGISTER IDENTITY</p>
+      <h4 class="app_sheet-title text-color-lemon">New agent</h4>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="agentKey" placeholder=" " type="text" id="reg-key" autocomplete="off" spellcheck="false" required=""/><label for="reg-key" class="demo-label">Agent key address:</label></div>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="controller" placeholder=" " type="text" id="reg-controller" autocomplete="off" spellcheck="false" required="" data-default-wallet=""/><label for="reg-controller" class="demo-label">Controller address:</label></div>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="label" placeholder=" " type="text" id="reg-label" maxlength="64" autocomplete="off" required=""/><label for="reg-label" class="demo-label">Agent name:</label></div>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="application" placeholder=" " type="text" id="reg-app" maxlength="64" autocomplete="off"/><label for="reg-app" class="demo-label">Application:</label></div>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="metadataURI" placeholder=" " type="text" id="reg-uri" maxlength="200" autocomplete="off" spellcheck="false"/><label for="reg-uri" class="demo-label">Metadata reference:</label></div>
+      <p class="app_hint">The connected wallet becomes the controller unless you enter another address.</p>
+      <p class="app_availability" data-availability="registerAgent"></p>
+      <button type="submit" class="app_submit" data-sound-hover="" data-sound-click=""><span>REGISTER IDENTITY</span></button>
+    </form>
+  </div>
+</div>
+
+<!-- 03 Credentials -->
+<div class="app_panel" data-panel="credentials" hidden>
+  <div class="app_panel-head">
+    <p class="text-point-number">.03</p>
+    <div><h3 class="app_h" data-text="Credentials" data-speed="6" data-start-100="">Credentials</h3><p class="text-size-space-grotesk-15 app_lede">Signed statements about the agent. Each one has an issuer, an expiry and a revocation state.</p></div>
+  </div>
+  <div class="app_cols">
+    <div data-view="credentials"><p class="app_muted">Loading</p></div>
+    <form class="app_sheet app_form" data-form="issueCredential" novalidate>
+      <p class="text-color-pastel-pink-main">ISSUE CREDENTIAL</p>
+      <h4 class="app_sheet-title text-color-lemon">For <span data-agent-name>the agent</span></h4>
+      <div class="app_field app_select-field">
+        <label for="cred-type" class="app_label">Type:</label>
+        <select class="app_select" name="type" id="cred-type">
+          <option value="controller">Verified controller</option>
+          <option value="application">Application credential</option>
+          <option value="capability" selected>Capability credential</option>
+          <option value="delegation">Delegation credential</option>
+        </select>
+      </div>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="reference" placeholder=" " type="text" id="cred-ref" maxlength="120" autocomplete="off" required=""/><label for="cred-ref" class="demo-label">Statement or reference:</label></div>
+      <div class="app_field app_select-field"><label for="cred-exp" class="app_label">Expires:</label><input class="app_date" name="expiresAt" type="date" id="cred-exp"/></div>
+      <p class="app_hint">Leave the expiry empty for a credential that lasts until revoked.</p>
+      <p class="app_availability" data-availability="issueCredential"></p>
+      <button type="submit" class="app_submit" data-sound-hover="" data-sound-click=""><span>ISSUE CREDENTIAL</span></button>
+    </form>
+  </div>
+</div>
+
+<!-- 04 Policies -->
+<div class="app_panel" data-panel="policies" hidden>
+  <div class="app_panel-head">
+    <p class="text-point-number">.04</p>
+    <div><h3 class="app_h" data-text="Policies" data-speed="6" data-start-100="">Policies</h3><p class="text-size-space-grotesk-15 app_lede">The controller sets what the agent may do and which assets it may touch. It also caps spending.</p></div>
+  </div>
+  <div class="app_cols">
+    <div data-view="policies"><p class="app_muted">Loading</p></div>
+    <form class="app_sheet app_form" data-form="setPolicy" novalidate>
+      <p class="text-color-pastel-pink-main">SET POLICY</p>
+      <h4 class="app_sheet-title text-color-lemon">For <span data-agent-name>the agent</span></h4>
+      <p class="app_label">Allowed actions:</p>
+      <div class="app_chips" data-chips="actions">
+        <label class="app_chip"><input type="checkbox" name="actions" value="pay"/><span>PAY</span></label>
+        <label class="app_chip"><input type="checkbox" name="actions" value="swap"/><span>SWAP</span></label>
+        <label class="app_chip"><input type="checkbox" name="actions" value="trade"/><span>TRADE</span></label>
+        <label class="app_chip"><input type="checkbox" name="actions" value="contract"/><span>CONTRACT</span></label>
+      </div>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="assets" placeholder=" " type="text" id="pol-assets" autocomplete="off" spellcheck="false" required=""/><label for="pol-assets" class="demo-label">Approved assets, comma separated:</label></div>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="protocols" placeholder=" " type="text" id="pol-protocols" autocomplete="off" spellcheck="false"/><label for="pol-protocols" class="demo-label">Approved protocol addresses:</label></div>
+      <div class="app_field-row">
+        <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="maxTransaction" placeholder=" " type="text" inputmode="decimal" id="pol-max" autocomplete="off" required=""/><label for="pol-max" class="demo-label">Max per tx, USD:</label></div>
+        <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="dailyLimit" placeholder=" " type="text" inputmode="decimal" id="pol-daily" autocomplete="off" required=""/><label for="pol-daily" class="demo-label">Daily limit, USD:</label></div>
+      </div>
+      <div class="app_field app_select-field"><label for="pol-exp" class="app_label">Expires:</label><input class="app_date" name="expiresAt" type="date" id="pol-exp"/></div>
+      <p class="app_availability" data-availability="setPolicy"></p>
+      <button type="submit" class="app_submit" data-sound-hover="" data-sound-click=""><span>SAVE POLICY</span></button>
+    </form>
+  </div>
+</div>
+
+<!-- 05 Delegation -->
+<div class="app_panel" data-panel="delegation" hidden>
+  <div class="app_panel-head">
+    <p class="text-point-number">.05</p>
+    <div><h3 class="app_h" data-text="Delegation" data-speed="6" data-start-100="">Delegation</h3><p class="text-size-space-grotesk-15 app_lede">Authority flows from the controller to the agent. It is never claimed by the agent.</p></div>
+  </div>
+  <div class="app_props">
+    <p><span class="blinking-decor-block"></span>EXPLICIT</p>
+    <p><span class="blinking-decor-block"></span>LIMITED</p>
+    <p><span class="blinking-decor-block"></span>REVOCABLE</p>
+    <p><span class="blinking-decor-block"></span>VERIFIABLE</p>
+    <p><span class="blinking-decor-block"></span>TIME BOUND</p>
+  </div>
+  <div class="app_cols">
+    <div data-view="delegation"><p class="app_muted">Loading</p></div>
+    <form class="app_sheet app_form" data-form="grantDelegation" novalidate>
+      <p class="text-color-pastel-pink-main">CREATE DELEGATION</p>
+      <h4 class="app_sheet-title text-color-lemon">To <span data-agent-name>the agent</span></h4>
+      <p class="app_label">Controller: <span data-delegation-controller>connect a wallet</span></p>
+      <p class="app_label">Permissions:</p>
+      <div class="app_chips">
+        <label class="app_chip"><input type="checkbox" name="permissions" value="pay"/><span>PAY</span></label>
+        <label class="app_chip"><input type="checkbox" name="permissions" value="swap"/><span>SWAP</span></label>
+        <label class="app_chip"><input type="checkbox" name="permissions" value="trade"/><span>TRADE</span></label>
+        <label class="app_chip"><input type="checkbox" name="permissions" value="contract"/><span>CONTRACT</span></label>
+      </div>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="spendLimit" placeholder=" " type="text" inputmode="decimal" id="del-limit" autocomplete="off" required=""/><label for="del-limit" class="demo-label">Spending authority, USD:</label></div>
+      <div class="app_field app_select-field"><label for="del-exp" class="app_label">Expires:</label><input class="app_date" name="expiresAt" type="date" id="del-exp"/></div>
+      <p class="app_hint">Leave the expiry empty for a delegation that lasts until revoked.</p>
+      <p class="app_availability" data-availability="grantDelegation"></p>
+      <button type="submit" class="app_submit" data-sound-hover="" data-sound-click=""><span>GRANT DELEGATION</span></button>
+    </form>
+  </div>
+</div>
+
+<!-- 06 Verify -->
+<div class="app_panel" data-panel="verify" hidden>
+  <div class="app_panel-head">
+    <p class="text-point-number">.06</p>
+    <div><h3 class="app_h" data-text="Verify" data-speed="6" data-start-100="">Verify</h3><p class="text-size-space-grotesk-15 app_lede">Any application can ask whether an agent may act. The answer comes from registry state only.</p></div>
+  </div>
+  <div class="app_cols">
+    <form class="app_sheet app_form" data-verify-form novalidate>
+      <p class="text-color-pastel-pink-main">AUTHORIZATION CHECK</p>
+      <h4 class="app_sheet-title text-color-lemon">Request</h4>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="agent" placeholder=" " type="text" id="ver-agent" autocomplete="off" spellcheck="false" required=""/><label for="ver-agent" class="demo-label">Agent ID or key address:</label></div>
+      <div class="app_field app_select-field">
+        <label for="ver-action" class="app_label">Action:</label>
+        <select class="app_select" name="action" id="ver-action">
+          <option value="pay">Pay</option>
+          <option value="swap">Swap</option>
+          <option value="trade">Trade</option>
+          <option value="contract">Contract interaction</option>
+        </select>
+      </div>
+      <div class="app_field-row">
+        <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="amount" placeholder=" " type="text" inputmode="decimal" id="ver-amount" autocomplete="off"/><label for="ver-amount" class="demo-label">Amount, USD:</label></div>
+        <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="asset" placeholder=" " type="text" id="ver-asset" autocomplete="off" spellcheck="false"/><label for="ver-asset" class="demo-label">Asset:</label></div>
+      </div>
+      <div class="demo-input-group app_field"><input class="demo-input-field w-input" name="protocol" placeholder=" " type="text" id="ver-protocol" autocomplete="off" spellcheck="false"/><label for="ver-protocol" class="demo-label">Protocol address, optional:</label></div>
+      <p class="app_hint">No model decides this. Each rule below is read from contract state.</p>
+      <button type="submit" class="app_submit" data-sound-hover="" data-sound-click=""><span>RUN CHECK</span></button>
+    </form>
+    <div data-view="verify"><div class="app_empty app_sheet is-light"><p>ENTER AN AGENT AND A REQUEST</p><p class="text-size-space-grotesk-15">The result lists every rule and whether it passed.</p></div></div>
+  </div>
+</div>
+
+<!-- 07 Activity -->
+<div class="app_panel" data-panel="activity" hidden>
+  <div class="app_panel-head">
+    <p class="text-point-number">.07</p>
+    <div><h3 class="app_h" data-text="Activity" data-speed="6" data-start-100="">Activity</h3><p class="text-size-space-grotesk-15 app_lede">Identity, credential, delegation and policy events, plus authorized and rejected actions.</p></div>
+  </div>
+  <div class="app_filters" data-activity-filters>
+    <button type="button" class="app_chip is-button is-on" data-filter="all"><span>ALL</span></button>
+    <button type="button" class="app_chip is-button" data-filter="identity"><span>IDENTITY</span></button>
+    <button type="button" class="app_chip is-button" data-filter="credential"><span>CREDENTIALS</span></button>
+    <button type="button" class="app_chip is-button" data-filter="delegation"><span>DELEGATION</span></button>
+    <button type="button" class="app_chip is-button" data-filter="policy"><span>POLICY</span></button>
+    <button type="button" class="app_chip is-button" data-filter="tx"><span>TRANSACTIONS</span></button>
+  </div>
+  <div data-view="activity"><p class="app_muted">Loading</p></div>
+</div>
+
+<!-- 08 Network -->
+<div class="app_panel" data-panel="network" hidden>
+  <div class="app_panel-head">
+    <p class="text-point-number">.08</p>
+    <div><h3 class="app_h" data-text="Network" data-speed="6" data-start-100="">Network</h3><p class="text-size-space-grotesk-15 app_lede">Robinhood Chain settings, wallet state and the four SCRIM registries.</p></div>
+  </div>
+  <div data-view="network"><p class="app_muted">Loading</p></div>
+</div>
+
+<div class="app_foot">
+  <p>SCRIM // MACHINE ECONOMIC IDENTITY</p>
+  <a href="index.html" class="link-block app_link"><span class="overflow-hidden"><span line-mask-text="">[ back to site ]</span></span></a>
+</div>
+
+</div></div>
+<div class="texturure-bg-wrap element-opacity"><div class="texturure-bg-light"></div></div>
+</section>
+
+<div class="app_tx" id="tx-sheet" role="dialog" aria-modal="true" aria-labelledby="tx-title" hidden>
+  <div class="modal_bg app_tx-bg" data-tx-close=""></div>
+  <div class="app_tx-panel">
+    <div class="flex-between-horiz">
+      <p class="text-color-pastel-pink-main" data-tx-kicker>TRANSACTION</p>
+      <button type="button" class="link-block app_link" data-tx-close=""><span class="overflow-hidden"><span line-mask-text="">close</span></span></button>
+    </div>
+    <div class="spacer-24px"></div>
+    <h3 class="text-color-lemon app_tx-title" id="tx-title" data-tx-title>Pending</h3>
+    <div class="spacer-24px"></div>
+    <div class="app_tx-steps" data-tx-steps></div>
+    <p class="text-size-space-grotesk-15 app_tx-text" data-tx-text></p>
+    <div class="app_tx-detail" data-tx-detail></div>
+  </div>
+</div>
+</main></div><script src="js/vendor/jquery-3.5.1.min.js" type="text/javascript"></script><script src="js/webflow/webflow.schunk.57d5559d2f0cd9f8.js" type="text/javascript"></script><script src="js/webflow/webflow.schunk.151f6812d738e368.js" type="text/javascript"></script><script src="js/webflow/webflow.schunk.438330566ff1c717.js" type="text/javascript"></script><script src="js/webflow/webflow.eb8f2d9a.8bd72c3536ba55ec.js" type="text/javascript"></script><script src="js/vendor/gsap.min.js"></script>
+
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+
+<script src="js/vendor/split-type.min.js"></script>
+
+
+
+
+
+
+<!-- Hides the Webflow badge -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.w-webflow-badge').addClass('webflow-badge');
+  });
+</script>
+
+
+
+<!-- SplitType + GSAP scramble effect for text and section indicator on scroll and click -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const chars = "ABCDEFGHKLMNOPQRSTUVWXYZ";
+  let isClickable = true;
+  const indicator = document.getElementById("section-indicator");
+  const sections = document.querySelectorAll("[data-title]");
+  let currentSection = "";
+
+  function generateRandomChars(count, finalChar) {
+    const result = [];
+    for (let i = 0; i < count; i++) {
+      result.push(chars.charAt(Math.floor(Math.random() * chars.length)));
+    }
+    result.push(finalChar);
+    return result;
+  }
+
+  function scrambleAnimate(element, text, useSplitType = false, skipDelay = false) {
+    const speed = parseFloat(element.getAttribute("data-speed")) || 8;
+    const animationType = element.getAttribute("data-animation") || "sequential";
+    const delay = skipDelay ? 0 : parseFloat(element.getAttribute("data-delay")) || 0;
+
+    if (useSplitType) {
+      if (element.splitInstance) element.splitInstance.revert();
+      element.splitInstance = new SplitType(element, { types: "words, chars" });
+
+      const charsEls = element.querySelectorAll(".char");
+      const timeline = gsap.timeline({ paused: true });
+      const timeline1 = gsap.timeline();
+
+      charsEls.forEach((char) => {
+        const randomChars = generateRandomChars(3, char.textContent);
+        char.innerHTML = "";
+        randomChars.forEach((c, i) => {
+          const span = document.createElement("span");
+          span.innerText = c;
+          span.style.opacity = "0";
+          span.style.position = i < 3 ? "absolute" : "relative";
+          if (i < 3) span.style.textShadow = "none";
+          if (i === 3) span.classList.add("last");
+          char.appendChild(span);
+        });
+      });
+
+      const items = animationType === "random"
+        ? Array.from(charsEls).sort(() => Math.random() - 0.5)
+        : charsEls;
+
+      items.forEach((char, index) => {
+        timeline1.to(char.children, {
+          opacity: 1,
+          stagger: {
+            each: 0.2,
+            onUpdate: function () {
+              if (this.progress() > 0.6 && !this._targets[0].classList.contains("last")) {
+                this._targets[0].style.opacity = "0";
+              }
+            }
+          }
+        }, `index+=${index / 2}`);
+      });
+
+      timeline.add(timeline1.timeScale(speed).delay(delay));
+
+      const startPos = element.hasAttribute("data-start-100") ? "top 100%" : "top 85%";
+      ScrollTrigger.create({
+        trigger: element,
+        start: startPos,
+        end: "top 50%",
+        onEnter: () => timeline.play(),
+        onLeaveBack: () => timeline.reverse(),
+      });
+
+    } else {
+      element.innerHTML = "";
+      element.style.whiteSpace = "pre-wrap";
+
+      text.split(" ").forEach((word, wordIndex, arr) => {
+        const wordSpan = document.createElement("span");
+        wordSpan.style.display = "inline-block";
+        word.split("").forEach((char) => {
+          const span = document.createElement("span");
+          span.style.position = "relative";
+          span.style.display = "inline-block";
+
+          const randomChars = generateRandomChars(3, char);
+          randomChars.forEach((c, i) => {
+            const inner = document.createElement("span");
+            inner.innerText = c;
+            inner.style.opacity = "0";
+            inner.style.position = i < 3 ? "absolute" : "relative";
+            if (i < 3) inner.style.textShadow = "none";
+            if (i === 3) inner.classList.add("final-char");
+            span.appendChild(inner);
+          });
+
+          wordSpan.appendChild(span);
+        });
+
+        element.appendChild(wordSpan);
+        if (wordIndex < arr.length - 1) {
+          element.appendChild(document.createTextNode(" "));
+        }
+      });
+
+      const spans = element.querySelectorAll("span span");
+      const items = animationType === "random"
+        ? [...spans].sort(() => Math.random() - 0.5)
+        : spans;
+
+      const timeline = gsap.timeline().timeScale(speed);
+      items.forEach((span, i) => {
+        timeline.to(span.children, {
+          opacity: 1,
+          stagger: {
+            each: 0.1,
+            onUpdate: function () {
+              if (this.progress() > 0.6 && !this._targets[0].classList.contains("final-char")) {
+                this._targets[0].style.opacity = "0";
+              }
+            }
+          }
+        }, i * 0.05);
+      });
+    }
+  }
+
+  document.querySelectorAll("[data-text]").forEach((el) => {
+    scrambleAnimate(el, el.getAttribute("data-text"), true);
+  });
+
+  document.querySelectorAll("[data-collection-link]").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (!isClickable) return;
+      isClickable = false;
+      setTimeout(() => isClickable = true, 2000);
+
+      const isPrimary = link.getAttribute("data-collection-link") === "1";
+
+      document.querySelectorAll("[data-text]").forEach((el) => {
+        const original = el.getAttribute("data-original-text") || el.getAttribute("data-text");
+        const newText = el.getAttribute("data-new-text");
+        if (!el.hasAttribute("data-original-text")) {
+          el.setAttribute("data-original-text", original);
+        }
+        const target = isPrimary ? original : newText;
+
+        if (target && target !== el.getAttribute("data-text")) {
+          gsap.to(el, {
+            opacity: 0,
+            duration: 0.3,
+            onComplete: () => {
+              if (el.splitInstance) {
+                el.splitInstance.revert();
+                el.splitInstance = null;
+              }
+              el.setAttribute("data-text", target);
+              el.innerHTML = target;
+              el.splitInstance = new SplitType(el, { types: "words, chars" });
+              scrambleAnimate(el, target, true, true);
+              gsap.to(el, { opacity: 1, duration: 0.3 });
+            }
+          });
+        }
+      });
+    });
+  });
+
+  const updateIndicator = (newTitle) => {
+    if (newTitle !== currentSection) {
+      currentSection = newTitle;
+      indicator.setAttribute("data-text", newTitle);
+      scrambleAnimate(indicator, newTitle, false);
+    }
+  };
+
+  const setInitialIndicator = () => {
+    const rect = sections[0].getBoundingClientRect();
+    if (rect.top <= window.innerHeight * 0.6 && rect.bottom >= window.innerHeight * 0.6) {
+      const title = sections[0].dataset.title;
+      currentSection = title;
+      indicator.setAttribute("data-text", title);
+      scrambleAnimate(indicator, title, false);
+    }
+  };
+
+  window.addEventListener("scroll", () => {
+    let newSection = "";
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 0.6 && rect.bottom >= window.innerHeight * 0.6) {
+        newSection = section.dataset.title;
+      }
+    });
+    if (newSection) updateIndicator(newSection);
+  });
+
+  setInitialIndicator();
+
+  setTimeout(() => {
+    scrambleAnimate(indicator, indicator.getAttribute("data-text"), false);
+  }, 100);
+});
+</script>
+
+
+
+
+
+
+
+
+<!-- Loads UnicornStudio only on desktop devices and removes it on mobile for maximum optimization -->
+
+
+
+
+
+
+
+
+
+<!-- Controls background music, hover, and click sounds via custom attributes -->
+<script>
+const backgroundMusicURL = "assets/sound/bg-music.mp3";
+const hoverSoundURL = "assets/sound/hover.mp3";
+const clickSoundURL = "assets/sound/click.mp3";
+
+const backgroundMusic = new Audio(backgroundMusicURL);
+const hoverSound = new Audio(hoverSoundURL);
+const clickSound = new Audio(clickSoundURL);
+backgroundMusic.loop = true;
+
+let isMusicPlaying = false;
+let lastUIState = null;
+let fadeInProcess = null;
+let fadeOutProcess = null;
+
+const backgroundMusicVolume = 0.5;
+const hoverSoundVolume = 0.75;
+const clickSoundVolume = 0.75;
+
+function updateSoundUI() {
+  if (lastUIState === isMusicPlaying) return;
+  lastUIState = isMusicPlaying;
+  document.querySelectorAll("[sound-panel]").forEach(panel => panel.hidden = isMusicPlaying);
+  document.querySelectorAll("[sound-panel-2]").forEach(panel => panel.hidden = !isMusicPlaying);
+}
+
+function stopFadeProcesses() {
+  if (fadeInProcess) clearInterval(fadeInProcess);
+  if (fadeOutProcess) clearInterval(fadeOutProcess);
+  fadeInProcess = null;
+  fadeOutProcess = null;
+}
+
+function toggleBackgroundMusicWithFade(play = true) {
+  const duration = 250;
+  const steps = 25;
+  const interval = duration / steps;
+  const stepSize = 1 / steps;
+
+  stopFadeProcesses();
+
+  if (play) {
+    backgroundMusic.volume = 0;
+    hoverSound.volume = 0;
+    clickSound.volume = 0;
+
+    backgroundMusic.play();
+    isMusicPlaying = true;
+
+    let currentStep = 0;
+    fadeInProcess = setInterval(() => {
+      currentStep++;
+      const progress = Math.min(currentStep * stepSize, 1);
+      backgroundMusic.volume = progress * backgroundMusicVolume;
+      hoverSound.volume = progress * hoverSoundVolume;
+      clickSound.volume = progress * clickSoundVolume;
+      if (progress >= 1) {
+        clearInterval(fadeInProcess);
+        fadeInProcess = null;
+      }
+    }, interval);
+  } else {
+    let currentVolume = backgroundMusic.volume;
+    const stepAmount = currentVolume / steps;
+
+    fadeOutProcess = setInterval(() => {
+      currentVolume -= stepAmount;
+      const progress = Math.max(currentVolume, 0);
+      backgroundMusic.volume = progress;
+      hoverSound.volume = progress;
+      clickSound.volume = progress;
+      if (progress <= 0) {
+        clearInterval(fadeOutProcess);
+        fadeOutProcess = null;
+        backgroundMusic.pause();
+      }
+    }, interval);
+
+    isMusicPlaying = false;
+  }
+
+  updateSoundUI();
+}
+
+function applyVolumes() {
+  backgroundMusic.volume = backgroundMusicVolume;
+  hoverSound.volume = hoverSoundVolume;
+  clickSound.volume = clickSoundVolume;
+}
+
+document.addEventListener("click", (event) => {
+  if (event.target.closest("[data-sound-on]")) {
+    toggleBackgroundMusicWithFade(true);
+  }
+
+  if (event.target.closest("[data-sound-mode]")) {
+    toggleBackgroundMusicWithFade(!isMusicPlaying);
+  }
+
+  if (event.target.closest("[data-sound-click]") && isMusicPlaying) {
+    clickSound.currentTime = 0;
+    clickSound.play();
+  }
+});
+
+document.addEventListener("mouseover", (event) => {
+  if (!isMusicPlaying) return;
+  const target = event.target.closest("[data-sound-hover]");
+  if (target && !target.hasAttribute("data-sound-playing")) {
+    target.setAttribute("data-sound-playing", "true");
+    hoverSound.currentTime = 0;
+    hoverSound.play();
+    target.addEventListener("mouseleave", () => {
+      target.removeAttribute("data-sound-playing");
+    }, { once: true });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", updateSoundUI);
+applyVolumes();
+</script>
+
+
+
+
+
+
+<!-- Preloader shows in new tabs but stays hidden after dismissal -->
+
+
+
+
+
+
+
+<!-- Lenis smooth scroll -->
+<script src="js/vendor/lenis.min.js"></script>
+
+<script>
+
+let lenis;
+if (Webflow.env("editor") === undefined) {
+  lenis = new Lenis({
+    lerp: 0.1,
+    wheelMultiplier: 1,
+    gestureOrientation: "vertical",
+    normalizeWheel: false,
+    smoothTouch: false
+  });
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+}
+$("[data-lenis-start]").on("click", function () {
+  lenis.start();
+});
+$("[data-lenis-stop]").on("click", function () {
+  lenis.stop();
+});
+$("[data-lenis-toggle]").on("click", function () {
+  $(this).toggleClass("stop-scroll");
+  if ($(this).hasClass("stop-scroll")) {
+    lenis.stop();
+  } else {
+    lenis.start();
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- Page Pixel Transition -->
+<script>
+  const isHomePage = window.location.pathname === "/" || window.location.pathname === "/index.html";
+
+  gsap.to(".load_grid-item", {
+    opacity: 0,
+    y: -10,
+    duration: isHomePage ? 0.0525 : 0.035,
+    stagger: { each: isHomePage ? 0.0123 : 0.0082, from: "center" },
+    ease: "power2.out",
+    onComplete: () => {
+      gsap.set(".load_grid", { display: "none" });
+    }
+  });
+
+  $(document).ready(function () {
+    $("a").on("click", function (e) {
+      if (
+        $(this).prop("hostname") === window.location.host &&
+        $(this).attr("href").indexOf("#") === -1 &&
+        $(this).attr("target") !== "_blank"
+      ) {
+        e.preventDefault();
+        let destination = $(this).attr("href");
+        gsap.set(".load_grid", { display: "grid" });
+        gsap.fromTo(
+          ".load_grid-item",
+          { opacity: 0, y: 10 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.035,
+            stagger: { each: 0.0082, from: "center" },
+            ease: "power2.out",
+            onComplete: () => {
+              window.location = destination;
+            }
+          }
+        );
+      }
+    });
+
+    window.onpageshow = function (event) {
+      if (event.persisted) {
+        window.location.reload();
+      }
+    };
+  });
+</script>
+
+
+
+
+
+
+
+<!---------------- Optimization ---------------->
+
+
+
+<!-- Delays loading of sections after preloader and hero -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Lottie visibility optimization -->
+
+
+
+
+
+
+<!-- Tracks visibility of .nav_menu, .preloader-enter, .modal and enables/disables scrolling via Lenis -->
+<script>
+  function isVisible(selector) {
+    const el = document.querySelector(selector);
+    return el && window.getComputedStyle(el).display !== 'none';
+  }
+
+  function updateScrollLock() {
+    const shouldLockScroll =
+      isVisible('.nav_menu') ||
+      isVisible('.preloader-enter') ||
+      isVisible('.modal');
+
+    if (typeof lenis !== "undefined") {
+      shouldLockScroll ? lenis.stop() : lenis.start();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateScrollLock();
+
+    const targets = ['.nav_menu', '.preloader-enter', '.modal'];
+
+    targets.forEach(selector => {
+      const el = document.querySelector(selector);
+      if (!el) return;
+
+      const observer = new MutationObserver(updateScrollLock);
+      observer.observe(el, { attributes: true, attributeFilter: ['style', 'class'] });
+    });
+  });
+</script>
+
+
+
+
+<!-- Suppress specific GSAP and Three.js warnings -->
+<script>
+  const originalWarn = console.warn;
+  console.warn = function (...args) {
+    if (args[0].includes("GSAP target")) {
+      return;
+    }
+    if (
+      args[0].includes("three.js") ||
+      args[0].includes("three.min.js") ||
+      args[0].includes("Multiple instances of Three.js")
+    ) {
+      return;
+    }
+    originalWarn.apply(console, args);
+  };
+</script>
+
+
+
+<!-- Changes the background color or gradient of the 'change-bg' element smoothly based on the 'section-bg' attribute of the currently visible section or clicked link -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const changeBg = document.querySelector('.change-bg');
+  const sections = document.querySelectorAll('[section-bg]');
+  const links = document.querySelectorAll('[data-collection-link]');
+  const collectionsSection = document.getElementById('section-collections');
+  const indexSection = document.getElementById('section-index');
+  let isClickable = true;
+
+  function updateBackground() {
+    let currentBackground = '#FFDFC4';
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        const bgAttribute = section.getAttribute('section-bg');
+
+        if (bgAttribute && bgAttribute.includes(',')) {
+          const [color1, color2] = bgAttribute.split(',').map(color => color.trim());
+          currentBackground = `radial-gradient(circle, ${color1} 0%, ${color2} 100%)`;
+        } else {
+          currentBackground = bgAttribute || currentBackground;
+        }
+      }
+    });
+
+    changeBg.style.background = currentBackground;
+  }
+
+  function handleLinkClick(event) {
+    if (!isClickable) return;
+
+    isClickable = false;
+    setTimeout(() => {
+      isClickable = true;
+    }, 2000);
+
+    const link = event.currentTarget;
+    const newBgColor = link.getAttribute('section-bg');
+
+    if (!newBgColor) return;
+
+    if (collectionsSection) collectionsSection.setAttribute('section-bg', newBgColor);
+    if (indexSection) indexSection.setAttribute('section-bg', newBgColor);
+
+    updateBackground();
+  }
+
+  links.forEach(link => link.addEventListener('click', handleLinkClick));
+  window.addEventListener('scroll', updateBackground);
+
+  updateBackground();
+});
+</script><script type="module" src="js/app.js"></script></body></html>

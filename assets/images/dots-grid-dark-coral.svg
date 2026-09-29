@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="132" fill="none" viewBox="0 0 132 132">
+  <g clip-path="url(#a)">
+    <rect width="6" height="6" x="-3" y="-3" fill="#5C2C45" rx="3"/>
+    <rect width="6" height="6" x="63" y="-3" fill="#5C2C45" rx="3"/>
+    <rect width="6" height="6" x="63" y="63" fill="#5C2C45" rx="3"/>
+    <rect width="6" height="6" x="63" y="129" fill="#5C2C45" rx="3"/>
+    <rect width="6" height="6" x="129" y="-3" fill="#5C2C45" rx="3"/>
+    <rect width="6" height="6" x="129" y="63" fill="#5C2C45" rx="3"/>
+    <rect width="6" height="6" x="129" y="129" fill="#5C2C45" rx="3"/>
+    <rect width="6" height="6" x="-3" y="63" fill="#5C2C45" rx="3"/>
+    <rect width="6" height="6" x="-3" y="129" fill="#5C2C45" rx="3"/>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <path fill="#fff" d="M0 0h132v132H0z"/>
+    </clipPath>
+  </defs>
+</svg>
