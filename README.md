@@ -12,7 +12,7 @@ JavaScript with no build step and no backend.
 
 | Page | What it is |
 | --- | --- |
-| `index.html` | Landing page. The client reference (DICH Webflow site) with SCRIM copy and the token CA |
+| `index.html` | Landing page. The client reference (DICH Webflow site) with SCRIM copy; the token CA bar sits at the top of the hero |
 | `app.html` | Console: Dashboard, Identity, Credentials, Policies, Delegation, Verify, Activity, Network |
 
 Deep link into the verifier: `app.html?agent=MEI0842&action=pay&amount=1200#verify`.
@@ -26,7 +26,8 @@ The landing page `verify_agent` form opens exactly that.
 export const TOKEN_ADDRESS = "";
 ```
 
-Empty, `null` or blank shows **Coming soon** and disables Copy. Any other value
+The CA bar is the first thing in the hero, right under the top notch of the
+frame. Empty, `null` or blank shows **Coming soon** and disables Copy. Any other value
 is shown exactly as written, and Copy copies exactly that. Nothing else in the
 repo holds the address; `test/config.test.mjs` fails if a second copy appears.
 `js/config.js` is served with `Cache-Control: no-cache`, so a redeploy shows the
@@ -49,6 +50,14 @@ pieces changed. Every asset is served from this repo.
 - The console reuses the reference vocabulary: the frame and menu, the idea
   modal sheet and its floating label fields, the CTA button, T 012 headings,
   NB Architekt labels, dotted frames and blinking blocks.
+
+## Performance notes
+
+- The preloader Lottie carried two PNGs; they are WebP now (1.96 MB to 272 KB, same pixels).
+- Gallery portraits and drop avatars are resized to about twice their largest display size.
+- Sounds use `preload="none"`: the 3.6 MB music loads only once the visitor turns sound on.
+- The three display fonts are preloaded. `js/vendor`, `js/webflow` and `assets` get long cache headers.
+- Kept on purpose: three.js loads eagerly because the second section's card image is its WebGL canvas.
 
 ## Code map
 

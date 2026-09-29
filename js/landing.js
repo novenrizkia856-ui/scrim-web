@@ -22,9 +22,10 @@ function renderCa() {
       const current = tokenAddress(TOKEN_ADDRESS);
       if (!current) return; // nothing to copy until the token launches
       const ok = await copyText(current);
-      label.textContent = ok ? "[ Copied ]" : "[ Copy failed ]";
+      label.textContent = ok ? "Copied" : "Copy failed";
+      if (ok) block.setAttribute("data-copied", ""); else block.removeAttribute("data-copied");
       clearTimeout(timer);
-      timer = setTimeout(function () { label.textContent = "[ Copy ]"; }, 1600);
+      timer = setTimeout(function () { label.textContent = "Copy"; block.removeAttribute("data-copied"); }, 1600);
     });
   });
 }

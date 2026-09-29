@@ -1,45 +1,48 @@
 /* SCRIM additions. css/template.css is the reference stylesheet, verbatim
    (asset URLs pointed at local files); every change or addition lives here. */
 
-/* ---------- token CA (hero, right column) ---------- */
-.ca-block { display: flex; flex-direction: column; align-items: flex-end; }
-.ca-value {
-  text-transform: none;
-  overflow-wrap: anywhere;
-  max-width: 22em;
-  text-align: right;
+/* ---------- token CA: top of the hero, under the frame notch ----------
+   Same parts as the reference: the black frame notch, NB Architekt labels and
+   the lemon block of the CTA button. rem sizes, so it never shrinks with vw. */
+.ca-bar {
+  position: relative; z-index: 5; align-self: center;
+  display: inline-flex; align-items: stretch; gap: 0; max-width: 100%;
+  margin: 1.1rem auto 1.4rem;
+  background: var(--black); color: var(--peach);
+  font-family: Nbarchitektstd, Verdana, sans-serif; font-size: .9rem; letter-spacing: .04em; line-height: 1;
+  clip-path: polygon(.7rem 0, calc(100% - .7rem) 0, 100% .7rem, 100% calc(100% - .7rem), calc(100% - .7rem) 100%, .7rem 100%, 0 calc(100% - .7rem), 0 .7rem);
+  box-shadow: 0 0 0 1px #07070722;
 }
-.ca-block[data-ca-state="soon"] .ca-value { text-transform: uppercase; }
-/* NB Architekt has no lowercase, so a live address uses Space Grotesk to show its exact characters */
-.ca-block[data-ca-state="live"] .ca-value { font-family: Spacegrotesk, Verdana, sans-serif; font-weight: 300; letter-spacing: .01em; }
+.ca-bar_label { display: flex; align-items: center; padding: .95rem .9rem .85rem 1.3rem; color: var(--lemon); border-right: 1px solid #ffebb033; }
+.ca-value { display: flex; align-items: center; padding: .95rem 1.1rem .85rem; min-width: 0; text-transform: uppercase; white-space: nowrap; }
+.ca-bar[data-ca-state="live"] .ca-value { text-transform: none; font-family: Spacegrotesk, Verdana, sans-serif; font-weight: 300; font-size: 1rem; letter-spacing: .01em; }
 .ca-copy {
-  appearance: none;
-  background: none;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  letter-spacing: inherit;
-  text-transform: uppercase;
-  cursor: pointer;
+  appearance: none; border: 0; margin: 0; cursor: pointer;
+  display: flex; align-items: center; padding: .95rem 1.3rem .85rem 1.1rem;
+  background: var(--lemon); color: var(--black);
+  font: inherit; letter-spacing: .06em; text-transform: uppercase;
+  transition: filter .2s, opacity .2s;
 }
-.ca-copy { font-family: Nbarchitektstd, Verdana, sans-serif; font-size: .83em; line-height: 1; }
-.ca-copy .overflow-hidden { display: block; }
-.ca-copy_text { display: block; }
-.ca-copy:disabled { cursor: default; opacity: .45; }
-.ca-copy:focus-visible { outline: 1px dashed currentColor; outline-offset: 3px; }
+.ca-copy:hover { filter: brightness(.92); }
+.ca-copy:disabled { cursor: default; background: #ffff8259; color: #070707b3; filter: none; }
+.ca-copy:focus-visible { outline: 2px dashed var(--lemon); outline-offset: -5px; }
+.ca-bar[data-copied] .ca-copy { background: var(--violet); }
 
+/* desktop: pinned under the notch, out of flow, so the hero keeps
+   the reference composition (title band, figure, labels) exactly where it was */
 @media screen and (min-width: 992px) {
-  .ca-block[data-ca-state="live"] .ca-value { white-space: nowrap; max-width: none; }
+  .section_index .ca-bar { position: absolute; top: 2.9rem; left: 50%; transform: translateX(-50%); margin: 0; }
+  .ca-bar_label, .ca-value, .ca-copy { padding-top: .8rem; padding-bottom: .7rem; }
 }
-/* the reference p scale, so the Copy button matches the labels around it */
-@media screen and (max-width: 991px) {
-  .ca-value { max-width: 14em; }
-  .ca-copy { font-size: 1.43em; }
+@media screen and (max-width: 767px) {
+  .ca-bar { font-size: .78rem; margin: .5rem auto 1.1rem; width: 100%; }
+  .ca-bar_label, .ca-value, .ca-copy { padding-top: .85rem; padding-bottom: .75rem; }
+  .ca-bar_label { padding-left: 1rem; padding-right: .75rem; }
+  .ca-value { flex: 1; padding-left: .8rem; padding-right: .8rem; }
+  .ca-copy { padding-left: .9rem; padding-right: 1rem; }
+  /* the full address always shows: wrap on phones instead of cutting it */
+  .ca-bar[data-ca-state="live"] .ca-value { font-size: .86rem; white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; line-height: 1.25; }
 }
-@media screen and (max-width: 767px) { .ca-copy { font-size: 1.93em; } }
-@media screen and (max-width: 479px) { .ca-copy { font-size: 2.93em; } }
 
 /* =====================================================================
    Console (app.html). Built from the reference vocabulary: the dark form
