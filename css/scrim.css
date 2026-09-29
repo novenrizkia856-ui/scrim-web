@@ -270,6 +270,9 @@ html.app_tx-open { overflow: hidden; }
   .section_app { padding-top: 5.5rem; }
   .app_head { grid-template-columns: 1fr 1fr; }
   .app_head-title { grid-column: 1 / -1; grid-row: 1; }
+  .app_head { position: relative; padding-top: 2.4rem; }
+  .app_back { position: absolute; top: 0; left: 0; }
+  .app_back + .spacer-paragraph { display: none; }
   .app_title { font-size: 5.4rem; }
   .app_cols, .app_cols.is-even, [data-panel="verify"] .app_cols { grid-template-columns: minmax(0, 1fr); }
   .app_dash-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
